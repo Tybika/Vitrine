@@ -1,8 +1,11 @@
-import { useEffect, useState } from "react";
 import { Cep } from "~/components/cep";
 import { Header } from "~/components/header";
 import { ProductImage } from "~/components/product-image";
 import { ProductInfo } from "~/components/product-info";
+
+type Category = {
+    name: string
+}
 
 type Product = {
     id: number,
@@ -10,7 +13,7 @@ type Product = {
     images: Array<string>,
     price: number,
     description: string,
-    category: object
+    category: Category
 }
 
 
