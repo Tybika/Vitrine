@@ -1,9 +1,11 @@
 import axios from "axios";
 
+const serverBaseURL = import.meta.env.VITE_SERVER_URL ?? "http://localhost:3001";
+
 export const cepAPI = axios.create({
-    baseURL: "http://viacep.com.br/ws"
+    baseURL: `${serverBaseURL}/cep`
 });
 
 export const productAPI = axios.create({
-    baseURL: "http://api.escuelajs.co/api/v1/products"
+    baseURL: `${serverBaseURL}/products`
 });
