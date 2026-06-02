@@ -1,4 +1,4 @@
-import type { Route } from "./+types/home";
+import type { Route } from "./+types/product";
 import { Product } from "../pages/product";
 import { productAPI } from "~/services/external-apis";
 
@@ -16,6 +16,6 @@ export async function loader({ params }: Route.LoaderArgs) {
 
 }
 
-export default async function Home({ loaderData }: Route.ComponentProps) {
+export default function Home({ loaderData }: Route.ComponentProps) {
     return <Product product={loaderData} />;
 }
